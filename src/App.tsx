@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import SkipToContent from './components/SkipToContent'
 import StructuredData from './components/StructuredData'
+import MouseBalls from './components/MouseBalls'
 import Home from './pages/Home'
 import Katalog from './pages/Catalog'
 import ONas from './pages/About'
@@ -16,6 +17,7 @@ function App() {
     <HelmetProvider>
       <Router>
         <div className="app">
+          <MouseBalls />
           <StructuredData />
           <SkipToContent />
           <header>

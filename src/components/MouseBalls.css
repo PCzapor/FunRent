@@ -1,0 +1,52 @@
+.mouse-balls-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.mouse-ball {
+  --ball-drift: 0px;
+  position: absolute;
+  border-radius: 50%;
+  background: var(--color-accent);
+  opacity: 0.85;
+  transform: translate(-50%, -50%);
+  animation: mouse-ball-fall ease-out forwards;
+  box-shadow: 0 2px 8px rgba(231, 162, 26, 0.4);
+}
+
+@keyframes mouse-ball-fall {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.85;
+  }
+  100% {
+    transform: translate(calc(-50% + var(--ball-drift)), calc(-50% + 120px)) scale(0.3);
+    opacity: 0;
+  }
+}
+
+.mouse-ball-burst {
+  --ball-end-x: 0px;
+  --ball-end-y: 0px;
+  animation-name: mouse-ball-burst;
+}
+
+@keyframes mouse-ball-burst {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(calc(-50% + var(--ball-end-x)), calc(-50% + var(--ball-end-y))) scale(0.2);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mouse-balls-container {
+    display: none;
+  }
+}
