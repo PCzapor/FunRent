@@ -19,10 +19,10 @@
 .navbar-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 16px 24px;
+  padding: 20px 30px;
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 40px;
 }
 
 .navbar-logo {
@@ -32,24 +32,24 @@
 }
 
 .navbar-logo img {
-  height: 48px;
+  height: 60px;
   width: auto;
 }
 
 .navbar-links {
   display: flex;
-  gap: 32px;
+  gap: 40px;
   flex: 1;
   justify-content: center;
 }
 
 .navbar-links a {
   font-weight: 500;
-  font-size: 15px;
+  font-size: 18px;
   color: var(--color-text);
   transition: color 0.2s ease;
   position: relative;
-  padding: 8px 0;
+  padding: 10px 0;
 }
 
 .navbar-links a:hover {
@@ -66,15 +66,20 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 2px;
+  height: 3px;
   background: var(--color-accent);
   border-radius: 2px;
 }
 
 .navbar-social {
   display: flex;
-  gap: 16px;
+  gap: 20px;
   align-items: center;
+}
+
+.navbar-social-link svg {
+  width: 30px;
+  height: 30px;
 }
 
 .navbar-social-link {
@@ -106,12 +111,12 @@
 .navbar-cta {
   background: var(--color-accent);
   color: white;
-  padding: 12px 24px;
-  min-width: 180px;
+  padding: 15px 30px;
+  min-width: 225px;
   box-sizing: border-box;
   border-radius: var(--radius-md);
   font-weight: 600;
-  font-size: 14px;
+  font-size: 18px;
   white-space: nowrap;
   text-align: center;
   transition:
@@ -155,23 +160,23 @@
 
 @media (max-width: 1024px) {
   .navbar-container {
-    gap: 16px;
+    gap: 20px;
   }
 
   .navbar-links {
-    gap: 16px;
+    gap: 20px;
   }
 
   .navbar-cta {
-    padding: 10px 16px;
-    font-size: 13px;
+    padding: 12px 20px;
+    font-size: 16px;
   }
 }
 
 @media (max-width: 768px) {
   .navbar-container {
     flex-wrap: wrap;
-    padding: 12px 16px;
+    padding: 15px 20px;
     justify-content: space-between;
   }
 
@@ -180,25 +185,30 @@
   }
 
   .navbar-logo img {
-    height: 40px;
+    height: 50px;
   }
 
   .navbar-cta {
     order: 2;
-    padding: 8px 12px;
-    font-size: 12px;
+    padding: 10px 15px;
+    font-size: 15px;
   }
 
   .navbar-social {
     order: 3;
-    gap: 12px;
+    gap: 15px;
+  }
+
+  .navbar-social-link svg {
+    width: 28px;
+    height: 28px;
   }
 
   .navbar-links {
     order: 4;
     width: 100%;
     justify-content: space-around;
-    gap: 8px;
-    font-size: 14px;
+    gap: 10px;
+    font-size: 17px;
   }
 }
