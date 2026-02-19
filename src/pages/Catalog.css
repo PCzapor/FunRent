@@ -1,0 +1,133 @@
+.katalog-page {
+  min-height: 100vh;
+}
+
+.katalog-hero {
+  padding-top: 40px;
+}
+
+.katalog-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.katalog-search {
+  width: 100%;
+  max-width: 500px;
+}
+
+.katalog-search-input {
+  width: 100%;
+  padding: 16px 24px;
+  border: 2px solid rgba(44, 38, 22, 0.1);
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  background: white;
+  color: var(--color-text);
+  transition: all 0.3s ease;
+}
+
+.katalog-search-input:focus {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(231, 162, 26, 0.1);
+}
+
+.katalog-search-input::placeholder {
+  color: var(--color-text-light);
+}
+
+.katalog-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.katalog-category-btn {
+  padding: 12px 24px;
+  border: 2px solid rgba(44, 38, 22, 0.1);
+  border-radius: var(--radius-md);
+  background: white;
+  color: var(--color-text);
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.katalog-category-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.katalog-category-btn:focus {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.katalog-category-btn.active {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: white;
+}
+
+.katalog-results {
+  margin-top: 48px;
+}
+
+.katalog-results-count {
+  font-size: 15px;
+  color: var(--color-text-light);
+  margin-bottom: 32px;
+}
+
+.katalog-empty {
+  text-align: center;
+  padding: 80px 20px;
+  color: var(--color-text-light);
+  font-size: 18px;
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 32px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.catalog-grid li {
+  list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@media (max-width: 768px) {
+  .katalog-categories {
+    gap: 8px;
+  }
+  
+  .katalog-category-btn {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+  
+  .catalog-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

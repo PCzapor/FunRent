@@ -1,0 +1,156 @@
+.onas-page {
+  min-height: 100vh;
+}
+
+.onas-hero {
+  padding-top: 40px;
+}
+
+.onas-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.onas-hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.onas-hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.onas-hero-text p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--color-text-light);
+}
+
+.onas-hero-image {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.onas-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+}
+
+.onas-process {
+  background: transparent;
+}
+
+.process-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+}
+
+.process-step {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 32px;
+  position: relative;
+  padding: 40px 0;
+  list-style: none;
+}
+
+.process-step-number {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  box-shadow: var(--shadow-md);
+  flex-shrink: 0;
+}
+
+.process-step-content {
+  padding-top: 8px;
+}
+
+.process-step-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--color-text);
+}
+
+.process-step-description {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--color-text-light);
+}
+
+.process-step-connector {
+  position: absolute;
+  left: 40px;
+  top: 120px;
+  width: 2px;
+  height: calc(100% - 80px);
+  background: linear-gradient(
+    to bottom,
+    var(--color-accent),
+    rgba(231, 162, 26, 0.3)
+  );
+}
+
+.process-step:last-child .process-step-connector {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .onas-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  
+  .onas-hero-image {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .process-step {
+    grid-template-columns: 60px 1fr;
+    gap: 24px;
+    padding: 32px 0;
+  }
+  
+  .process-step-number {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+  
+  .process-step-connector {
+    left: 30px;
+    top: 92px;
+  }
+  
+  .process-step-title {
+    font-size: 1.5rem;
+  }
+  
+  .process-step-description {
+    font-size: 1rem;
+  }
+}

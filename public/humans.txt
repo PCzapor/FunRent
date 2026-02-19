@@ -1,0 +1,8 @@
+/* TEAM */
+Developer: Fun Rent Team
+Contact: kontakt@funrent.pl
+
+/* SITE */
+Last update: 2024
+Standards: HTML5, CSS3, JavaScript ES6+
+Components: React, TypeScript, Vite
