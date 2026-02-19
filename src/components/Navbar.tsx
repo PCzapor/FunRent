@@ -63,11 +63,21 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
+            className="navbar-social-link navbar-social-instagram"
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <defs>
+                <linearGradient id="instagram-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#f09433" />
+                  <stop offset="25%" stopColor="#e6683c" />
+                  <stop offset="50%" stopColor="#dc2743" />
+                  <stop offset="75%" stopColor="#cc2366" />
+                  <stop offset="100%" stopColor="#bc1888" />
+                </linearGradient>
+              </defs>
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="url(#instagram-gradient)" strokeWidth="2" fill="none" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="url(#instagram-gradient)" strokeWidth="2" fill="none" />
+              <circle cx="17.5" cy="6.5" r="1.25" fill="url(#instagram-gradient)" />
             </svg>
           </a>
           <a
@@ -75,8 +85,9 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook"
+            className="navbar-social-link navbar-social-facebook"
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
               <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
             </svg>
           </a>

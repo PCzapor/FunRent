@@ -80,10 +80,13 @@
   align-items: center;
   justify-content: center;
   padding: 0;
-  line-height: 0;
   transition: background 0.2s ease, opacity 0.2s ease;
   z-index: 2;
   opacity: 0.8;
+}
+
+.catalog-card-slider-btn svg {
+  display: block;
 }
 
 .catalog-card-slider-btn:hover {

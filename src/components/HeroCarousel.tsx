@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { HERO_SLIDES } from '../mock/funrent.data'
+import { IconPrev, IconNext, IconPlay, IconPause } from './Icons'
 import './HeroCarousel.css'
 
 const HeroCarousel = () => {
@@ -101,14 +102,14 @@ const HeroCarousel = () => {
           onClick={prevSlide}
           aria-label="Poprzedni slajd"
         >
-          <span aria-hidden="true">‹</span>
+          <IconPrev />
         </button>
         <button
           className="hero-carousel-btn hero-carousel-btn-next"
           onClick={nextSlide}
           aria-label="Następny slajd"
         >
-          <span aria-hidden="true">›</span>
+          <IconNext />
         </button>
       </div>
 
@@ -118,7 +119,7 @@ const HeroCarousel = () => {
           onClick={togglePlayPause}
           aria-label={isPlaying ? 'Pauza' : 'Odtwarzaj'}
         >
-          <span aria-hidden="true">{isPlaying ? '⏸' : '▶'}</span>
+          {isPlaying ? <IconPause /> : <IconPlay />}
         </button>
         <div className="hero-carousel-dots" role="tablist" aria-label="Wybierz slajd">
           {HERO_SLIDES.map((_, index) => (

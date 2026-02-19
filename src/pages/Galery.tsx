@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import SEO from '../components/SEO'
+import { IconPrev, IconNext, IconClose } from '../components/Icons'
 import { GALLERY, GALLERY_CATEGORY_CARDS, Category } from '../mock/funrent.data'
 import './Galery.css'
 
@@ -157,7 +158,7 @@ const Galery = () => {
                   onClick={closeLightbox}
                   aria-label="Zamknij powiększenie"
                 >
-                  ×
+                  <IconClose />
                 </button>
                 {categoryImages.length > 1 && (
                   <>
@@ -169,7 +170,7 @@ const Galery = () => {
                       }}
                       aria-label="Poprzednie zdjęcie"
                     >
-                      ‹
+                      <IconPrev />
                     </button>
                     <button
                       className="lightbox-nav lightbox-next"
@@ -179,7 +180,7 @@ const Galery = () => {
                       }}
                       aria-label="Następne zdjęcie"
                     >
-                      ›
+                      <IconNext />
                     </button>
                   </>
                 )}

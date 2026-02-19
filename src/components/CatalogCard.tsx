@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { CatalogItem, CATEGORY_LABEL } from '../mock/funrent.data'
+import { IconPrev, IconNext } from './Icons'
 import './CatalogCard.css'
 
 interface CatalogCardProps {
@@ -51,7 +52,7 @@ const CatalogCard = ({ item }: CatalogCardProps) => {
               onClick={goPrev}
               aria-label="Poprzednie zdjęcie"
             >
-              ‹
+              <IconPrev />
             </button>
             <button
               type="button"
@@ -59,7 +60,7 @@ const CatalogCard = ({ item }: CatalogCardProps) => {
               onClick={goNext}
               aria-label="Następne zdjęcie"
             >
-              ›
+              <IconNext />
             </button>
             <div className="catalog-card-dots" role="tablist" aria-label="Wybierz zdjęcie">
               {images.map((_, idx) => (
