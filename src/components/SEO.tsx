@@ -6,6 +6,7 @@ interface SEOProps {
   keywords?: string
   canonical?: string
   ogImage?: string
+  noindex?: boolean
 }
 
 const SEO = ({
@@ -14,6 +15,7 @@ const SEO = ({
   keywords = 'wynajem sprzętu eventowego, animacje dla dzieci, obsługa eventów, Podkarpacie, fotobudka, nagłośnienie, dekoracje, wesele, urodziny',
   canonical,
   ogImage = '/og.png',
+  noindex = false,
 }: SEOProps) => {
   const fullTitle = title.includes('Fun Rent') ? title : `${title} | Fun Rent`
   const siteUrl = 'https://funrent.pl'
@@ -40,7 +42,7 @@ const SEO = ({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
 
-      <meta name="robots" content="index, follow" />
+      <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
     </Helmet>
   )
 }

@@ -14,7 +14,6 @@ const Home = () => {
         canonical="/"
       />
       <div className="home">
-        {/* Hero Section */}
         <section className="hero-section" aria-labelledby="hero-title">
           <div className="container">
             <div className="hero-grid">
@@ -37,7 +36,6 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Featured Items */}
         <section className="featured-section section" aria-labelledby="featured-title">
           <div className="container">
             <h2 id="featured-title" className="section-title">Najlepsze itemy</h2>
@@ -54,7 +52,6 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Testimonials */}
         <section className="testimonials-section section" aria-labelledby="testimonials-title">
           <div className="container">
             <h2 id="testimonials-title" className="section-title">Opinie klientów</h2>

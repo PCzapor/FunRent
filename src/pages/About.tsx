@@ -46,7 +46,6 @@ const About = () => {
         canonical="/o-nas"
       />
       <div className="onas-page">
-        {/* Hero Section */}
         <section className="onas-hero section" aria-labelledby="about-title">
           <div className="container">
             <div className="onas-hero-grid">
@@ -79,7 +78,6 @@ const About = () => {
           </div>
         </section>
 
-        {/* Jak działamy */}
         <section id="jak-dzialamy" ref={jakDzialamyRef} className="onas-process section" aria-labelledby="process-title">
           <div className="container">
             <h2 id="process-title" className="section-title">Jak działamy</h2>
